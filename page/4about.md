@@ -15,7 +15,7 @@ type: page
 * 
 
 ## 联系我
-<iframe src="https://githubbadge.appspot.com/gaohaoyang?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+<iframe src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/webwxgetmsgimg.jpeg" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
 
 
 ## 关于本站
