@@ -11,8 +11,10 @@ type: page
 
 ## 关于我
 
-荆州市监利县人
+荆州市监利县人1
 
 ## 联系我
 
  ![Image text](https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/webwxgetmsgimg.jpeg)
+
+<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/webwxgetmsgimg.jpeg"  height="330" width="495">
