@@ -16,4 +16,4 @@ type: page
 ## 联系我
 
 微信：
-<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/webwxgetmsgimg.jpeg"  height="500" width="200">
+<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/webwxgetmsgimg.jpeg"  height="450" width="300">
