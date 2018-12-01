@@ -14,16 +14,16 @@ url: "https://gkbytes.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: #gaohaoyang126
-facebook_username: #gaohaoyang.water
-github_username:  643435675
+twitter_username:  
+facebook_username:  
+github_username:  gkbytes
 email: 643435675@QQ.com
 weibo_username: 3115521wh
 zhihu_username: hll643435675
 linkedIn_username: gaohaoyang
 dribbble_username:
 
-description_footer: 来自徐代龙的个人专栏！
+description_footer: 来自Gkbytes的个人专栏！
 
 # comments
 # two ways to comment, only choose one, and use your own short name
