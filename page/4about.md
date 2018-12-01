@@ -16,3 +16,8 @@ type: page
 ## 联系我
 
 <img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/webwxgetmsgimg.jpeg"  height="450" width="300">
+
+## 目标
+* 搭建一个笔记网站。
+* 把学习到的新知识，进行的步骤记下来(边学边记录)。
+* 成功的写个总结，没成功的慢慢摸索。
