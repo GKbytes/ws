@@ -9,7 +9,7 @@ type: page
 * content
 {:toc}
 
-## 工具
+## 教程工具
 
 * [box-shadow generator](http://www.cssmatic.com/box-shadow)
 

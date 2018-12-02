@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "CentOS7定时任务详解"
-categories: linux
-tags:  centos7 crontab linux 工具软件  
-author: SnakeSon
+title:  "arducopter避障分析"
+categories: arducopter
+tags:  UAV APM arducopter sf40 避障  
+author: Byte
 ---
 
 * content
@@ -12,7 +12,7 @@ author: SnakeSon
 
 ## 前言
 
-工作中需要开启一个定时任务：每天晚上2点进行爬虫代码的运行，这不得不去学习一下linux 下的定时任务crontab
+最近在研究Arducopter的避障功能，发现其避障碍效果做的很差，速度控制时候出了问题，最近也在研究怎么优化此状况。
 
 ##  crontab
 
