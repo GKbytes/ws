@@ -14,21 +14,9 @@ author: Byte
 
 最近在研究Arducopter的避障功能，发现其避障碍效果做的很差，速度控制时候出了问题，最近也在研究怎么优化此状况。
 
-##  crontab
+##  内容
 
 
-yum install crontabs
-
-说明：
-/sbin/service crond start //启动服务
-/sbin/service crond stop //关闭服务
-/sbin/service crond restart //重启服务
-/sbin/service crond reload //重新载入配置
-查看crontab服务状态：service crond status
-手动启动crontab服务：service crond start
-查看crontab服务是否已设置为开机启动，执行命令：ntsysv
-加入开机自动启动:
-chkconfig crond on
 
 
 
