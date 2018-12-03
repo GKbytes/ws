@@ -24,12 +24,12 @@ author: Byte
 
 再进入真正避障速度调整：
 
-<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/adjust_velocity_p.png"  height="300" width="800">
+<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/adjust_velocity_p.png"  >
 
 最关键的是：
 
-<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/1.png"  height="600" width="800">
-<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/2.png"  height="450" width="800">
+<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/1.png" >
+<img src="https://raw.githubusercontent.com/GKbytes/gkbytes.github.io/master/photos/2.png"  >
 
 ## 目前存在问题
 * 前后走动会引起左右避障;
