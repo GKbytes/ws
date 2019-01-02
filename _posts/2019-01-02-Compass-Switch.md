@@ -1,34 +1,19 @@
 ---
 layout: post
-title:  "这是我自己来测试的md页面"
-categories: JavaScript
-tags:  countdown JavaScript
-author: SnakeSon
+title:  "Compass Switch"
+categories: Arducopter Compass
+tags: APM Compass
+author: Byte
 ---
 
 * content
 {:toc}
 
-关于写倒计时大家可能都都比较熟悉，使用 setTimeout 或 setInterval 就可以搞定。几秒钟或者几分钟的倒计时这样写没有问题，但是如果是长时间的倒计时，这样写就会不准确。如果用户修改了他的设备时间，这样的倒计时就没有意义了。今天就说说写一个精确的倒计时的方法。
+由于飞行器罗盘容易挂掉，故现在开始研究APM 罗盘切换。
 
-![](https://img.alicdn.com/tfs/TB18QnlOpXXXXcVXpXXXXXXXXXX-388-256.png)
+## 如何做：
 
-
-
-
-## 原理
-
-众所周知 setTimeout 或者 setInterval 调用的时候会有微小的误差。有人做了一个 [demo](https://bl.ocks.org/kenpenn/raw/92ebaa71696b4c4c3acd672b1bb3f49a/) 来观察这个现象并对其做了修正。短时间的误差倒也可以接受，但是作为一个长时间的倒计时，误差累计就会导致倒计时不准确。
-
-因此我们可以在获取剩余时间的时候，每次 new 一个设备时间，因为设备时间的流逝相对是准确的，并且如果设备打开了网络时间同步，也会解决这个问题。
-
-但是，如果用户修改了设备时间，那么整个倒计时就没有意义了，用户只要将设备时间修改为倒计时的 endTime 就可以轻易看到倒计时结束是页面的变化。因此一开始获取服务端时间就是很重要的。
-
-简单的说，一个简单的精确倒计时原理如下：
-
-- 初始化时请求一次服务器时间 serverTime，再 new 一个设备时间 deviceTime
-- deviceTime 与 serverTime 的差作为时间偏移修正
-- 每次递归时 new 一个系统时间，解决 setTimeout 不准确的问题
+检测到罗盘里的时间轴不更新，则开始执行切换罗盘，切换罗盘就是切换主罗盘，那么就是切换那个主标志：_primary = 0 / _primary = 1 。
 
 ## 代码
 

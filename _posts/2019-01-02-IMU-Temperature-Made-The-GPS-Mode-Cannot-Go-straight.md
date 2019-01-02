@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "这是徐代龙进行的第二篇文章"
-categories: SnakeSon
-tags:  hexo JavaScript
-author: SnakeSon
+title:  "In order to solve the problem of the compass always need to calibrate"
+categories: compass calibrate
+tags: APM
+author: Byte
 ---
 
 * content
@@ -11,12 +11,12 @@ author: SnakeSon
 
 ## 目的：
 
-写这篇文章的目的主要是为了测试在本地进行md文件的编写是否能使用hexo进行html生成，然后上传到github上，通过访问https://day21.top 这个网站查看能否看到最新的文章
+为了解决磁罗盘总是需要校准的问题。最后发现由于外界温度太低，在IMU升温时候，加速度会产生偏移，导致GPS模式下无人机不能走直线。
 
 
 
 
-## 操作步骤：
+## bi：
 
 ```js
 
