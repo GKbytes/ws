@@ -13,11 +13,46 @@ author: Byte
 
 ## 如何做：
 
-检测到罗盘里的时间轴不更新，则开始执行切换罗盘，切换罗盘就是切换主罗盘，那么就是切换那个主标志：_primary = 0 / _primary = 1 。
+检测到罗盘里的时间轴不更新，则开始执行切换罗盘，切换罗盘就是切换主罗盘，那么就是切换那个主标志：_primary = 0 (用第一罗盘)/ _primary = 1（用第二罗盘）。
+
+COMPASS_PRIMARY: Choose primary compass
+Note: This parameter is for advanced users
+If more than one compass is available, this selects which compass is the primary. When external compasses are connected, they will be ordered first. NOTE: If no external compass is attached, this parameter is ignored.
+
+
 
 ## 代码
+目前有两个个调用readMagData()(此函数为切换罗盘的函数)：
+- calcQuatAndFieldStates();
+- SelectMagFusion();
 
-获取剩余时间的代码如下：
+目前有两种方案，获得那个timeout值：
+- 通过构建虚函数 uint8_t maxCount = _ahrs->get_compass()->get_count(); 然后在readMagData();里调用此虚函数，即可得到超时标志。
+- 或者直接在5983驱动那边用两个全局变量，计算出超时标志，然后直接传过来进行切换即可。
+- 若是想救多次，那么还得在那个3100中加入这样的判断。若是，5983超时标志已经触发，那么切换到3100后，发现3100也超时，若是5983标志正常，那么再次切换到5983，哈哈哈，就这样愉快地决定了。
+```js
+yawAlignComplete;          // true when yaw alignment is complete
+```
+
+```js
+    // If we are using the compass and the magnetometer has been unhealthy for too long we declare a timeout
+    if (magHealth) {
+        magTimeout = false;
+        lastHealthyMagTime_ms = imuSampleTime_ms;
+         printf("magTimeout = false\n");
+         printf("imuSampleTime_ms=%d lastHealthyMagTime_ms=%d use_compass()=%d\n",imuSampleTime_ms, lastHealthyMagTime_ms, use_compass());
+    } else if ((imuSampleTime_ms - lastHealthyMagTime_ms) > frontend->magFailTimeLimit_ms && use_compass()) {
+        magTimeout = true;
+        printf("magTimeout = true\n");
+    }
+
+    // imuSampleTime_ms 在 readIMUData() 里 imuSampleTime_ms = AP_HAL::millis();更新。
+    // magFailTimeLimit_ms = 10000; number of msec before a magnetometer failing innovation consistency checks is declared failed (msec) 大于10000毫秒 这样判断显然错误。
+    // use_compass() return true if the compass should be used for yaw calculations.
+
+```
+
+
 
 ```js
 /**
